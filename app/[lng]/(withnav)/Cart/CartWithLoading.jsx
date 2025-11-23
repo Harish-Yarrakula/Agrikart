@@ -20,7 +20,7 @@ const CartWithLoading = () => {
  },[products.length]);
 
  const handleFetchProducts = () => {
-   fetch("http://localhost:5000/cartProducts",{method:"GET"})
+   fetch("https://agrikart.onrender.com/cartProducts",{method:"GET"})
    .then(res=>res.json())
    .then(data=>setProducts(data))
    .catch(err=>console.log(err))
@@ -33,7 +33,7 @@ const CartWithLoading = () => {
    setLoadingStates(prev => ({ ...prev, [loadingKey]: true }));
 
    try {
-     const response = await fetch(`http://localhost:5000/cartProducts/${id}`,{
+     const response = await fetch(`https://agrikart.onrender.com/cartProducts/${id}`,{
        method:"PATCH",
        headers:{"Content-Type":"application/json"},
        body:JSON.stringify({quantity:Quantity})
@@ -59,7 +59,7 @@ const CartWithLoading = () => {
    setLoadingStates(prev => ({ ...prev, [loadingKey]: true }));
 
    try {
-     const response = await fetch(`http://localhost:5000/cartProducts/${id}`,{
+     const response = await fetch(`https://agrikart.onrender.com/cartProducts/${id}`,{
        method:"DELETE"
      });
 

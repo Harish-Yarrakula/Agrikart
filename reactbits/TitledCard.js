@@ -34,7 +34,7 @@ const handleAdd = async (product) => {
             size: size,
             quantity: 1,
         };
-        const res = await fetch("http://localhost:5000/cartProducts", {
+        const res = await fetch("https://agrikart.onrender.com/cartProducts", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(cartItem),

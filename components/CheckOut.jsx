@@ -36,7 +36,7 @@ const CheckOutWithLoading = (props) => {
   }, [products.length]);
 
   const handleFetchProducts = () => {
-    fetch("http://localhost:5000/cartProducts", { method: "GET" })
+    fetch("https://agrikart.onrender.com/cartProducts", { method: "GET" })
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.log(err))
@@ -53,7 +53,7 @@ const CheckOutWithLoading = (props) => {
     setLoading(true);
     try {
       console.log(Order)
-      const response = await fetch("http://localhost:5000/CheckOut", {
+      const response = await fetch("https://agrikart.onrender.com/CheckOut", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Order)

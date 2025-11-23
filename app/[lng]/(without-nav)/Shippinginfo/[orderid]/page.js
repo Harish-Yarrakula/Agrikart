@@ -27,7 +27,7 @@ const ShippingInfo = () => {
     React.useEffect(() => {
         if (!orderid) return;
 
-        fetch(`http://localhost:5000/OrderDetails/${orderid}`)
+        fetch(`https://agrikart.onrender.com/OrderDetails/${orderid}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

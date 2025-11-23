@@ -42,7 +42,7 @@ export default function Component() {
   }, [productes.length]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://agrikart.onrender.com/products")
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -63,7 +63,7 @@ export default function Component() {
   }, [query, products]);
 
   const handleFetchProducts = () => {
-    fetch("http://localhost:5000/cartProducts", { method: "GET" })
+    fetch("https://agrikart.onrender.com/cartProducts", { method: "GET" })
       .then(res => res.json())
       .then(data => setProductes(data))
       .catch(err => console.log(err))

@@ -14,7 +14,7 @@ const Page = () => {
     if (user && user.id) {
       const fetchOrders = async () => {
         // Updated API route to fetch orders by user id
-        const response = await fetch(`http://localhost:5000/Orders/user/${user.id}`);
+        const response = await fetch(`https://agrikart.onrender.com/Orders/user/${user.id}`);
         const data = await response.json();
         setOrders(data);
       };
