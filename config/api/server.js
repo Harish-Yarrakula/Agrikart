@@ -14,7 +14,7 @@ const app=express();
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',  
+  origin: 'https://agrikart-5d5g.vercel.app',  
   credentials: true
 }));
 app.use(express.json());
@@ -312,3 +312,4 @@ const start = async () => {
 };
 
 start();
+
