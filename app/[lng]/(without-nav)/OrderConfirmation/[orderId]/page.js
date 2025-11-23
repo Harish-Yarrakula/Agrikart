@@ -15,7 +15,7 @@ const Page = () => {
 
         const fetchOrder = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/OrderDetails/${orderId}`);
+                const response = await fetch(`https://agrikart.onrender.com/OrderDetails/${orderId}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch order");
                 }

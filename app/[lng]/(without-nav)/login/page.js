@@ -50,7 +50,7 @@ const Page = () => {
     
     const handleOtpVerify = (e) => {
         e.preventDefault();
-        fetch("http://localhost:5000/verify-otp", {method:"POST",headers:{"Content-Type":"application/json"},credentials: "include",body:JSON.stringify({mobile:formData.signInMobile, otp})})
+        fetch("https://agrikart.onrender.com/verify-otp", {method:"POST",headers:{"Content-Type":"application/json"},credentials: "include",body:JSON.stringify({mobile:formData.signInMobile, otp})})
         .then(response => response.json())
         .then(data => {
             console.log("OTP verification response:", data.message);
@@ -71,7 +71,7 @@ const Page = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:5000/signup", {
+            const response = await fetch("https://agrikart.onrender.com/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",

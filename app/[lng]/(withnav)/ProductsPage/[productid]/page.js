@@ -65,7 +65,7 @@ const Page = () => {
         if (!productid) return;
         
         setLoading(true);
-        fetch(`http://localhost:5000/product/${productid}`)
+        fetch(`https://agrikart.onrender.com/product/${productid}`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP Error! Status: ${res.status}`);
                 return res.json();
@@ -87,7 +87,7 @@ const Page = () => {
     
     useEffect(() => {
         if (product) {
-            fetch(`http://localhost:5000/products/category?category=${encodeURIComponent(product.category)}`)
+            fetch(`https://agrikart.onrender.com/products/category?category=${encodeURIComponent(product.category)}`)
                 .then(res => {
                     if (!res.ok) throw new Error(`HTTP Error! Status: ${res.status}`);
                     return res.json();

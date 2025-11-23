@@ -68,9 +68,9 @@ const Page = () => {
         const fetchAllProducts = async () => {
             try {
                 const requests = [
-                    fetch("http://localhost:5000/featured", { credentials: 'include' }),
-                    fetch("http://localhost:5000/trending", { credentials: 'include' }),
-                    fetch("http://localhost:5000/latest", { credentials: 'include' })
+                    fetch("https://agrikart.onrender.com/featured", { credentials: 'include' }),
+                    fetch("https://agrikart.onrender.com/trending", { credentials: 'include' }),
+                    fetch("https://agrikart.onrender.com/latest", { credentials: 'include' })
                 ];
                 const responses = await Promise.all(requests);
                 for (const res of responses) {

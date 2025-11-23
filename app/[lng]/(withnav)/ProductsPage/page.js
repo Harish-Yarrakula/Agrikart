@@ -29,7 +29,7 @@ const Page = () => {
     const params = useSearchParams();
 
     useEffect(() => {
-        fetch("http://localhost:5000/products", { credentials: 'include' })
+        fetch("https://agrikart.onrender.com/products", { credentials: 'include' })
             .then(res => {
                 if (!res.ok) throw new Error('Network response was not ok');
                 return res.json();
