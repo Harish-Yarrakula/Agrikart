@@ -8,6 +8,7 @@ import Avatars from "./Avatar"
 import { useAuth } from "@/context/AuthContext"
 import { useTranslation } from "react-i18next"
 import Image from 'next/image'
+import logo from '@/public/logo.png'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -163,7 +164,7 @@ export default function Component() {
           </Popover>
           <div className="flex flex-1 items-center gap-6 max-md:justify-between">
             <Link href="/DashBoard" className="text-primary hover:text-primary/90">
-              <Image src="/logo.png" alt={t('header.logoAltText')} className="h-20 w-20" width={80} height={80} />
+              <Image src={logo} alt={t('header.logoAltText')} className="h-20 w-20" width={80} height={80} />
             </Link>
             <NavigationMenu className="max-md:hidden">
               <NavigationMenuList className="gap-2">
@@ -221,4 +222,5 @@ export default function Component() {
       </section>
     </header>
   )
+
 }
