@@ -49,7 +49,7 @@ const WeatherDashboard = () => {
     const fetchWeather = () => {
       setLoading(true);
       setError(null);
-      fetch(`http://api.weatherapi.com/v1/forecast.json?key=0259620efd7340c4b3d133829251209&q=16.203197, 80.391997&days=1&aqi=yes&alerts=yes`)
+      fetch(`https://api.weatherapi.com/v1/forecast.json?key=0259620efd7340c4b3d133829251209&q=16.203197,%2080.391997&days=1&aqi=yes&alerts=yes`)
       .then(res=> res.json())
       .then(data=> setWeatherData(data))
       .catch(err=> setError("Failed to fetch weather data."))
@@ -136,5 +136,6 @@ const WeatherDashboard = () => {
     </div>
   );
 };
+
 
 export default WeatherDashboard;
