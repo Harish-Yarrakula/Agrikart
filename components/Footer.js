@@ -24,7 +24,7 @@ function Footers() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
           <div>
             <Link href="/DashBoard" className="flex items-center mb-4">
-              <Image src="/logo.png" alt={t('footer.logoAltText')} width={160} height={50} />
+              <Image src={logo} alt={t('footer.logoAltText')} width={160} height={50} />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -69,3 +69,4 @@ function Footers() {
 
 
 export default Footers;
+
